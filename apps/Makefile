@@ -12,7 +12,7 @@ INTE = -DEDGELONG
 
 #compilers
 $(info ************  Using CILK ************)
-PCC = g++
+PCC = g++-5
 PCFLAGS = -std=c++14 -fcilkplus -lcilkrts -g -O3 -DCILK $(INTV) $(INTE) $(EDGEDATA)
 LDFLAGS = -L../lib/mimalloc/out/release -lmimalloc 
 
@@ -25,7 +25,7 @@ GRAPHBOLT=../core/graphBolt/AdaptiveExecutor.h ../core/graphBolt/GraphBoltEngine
 
 OTHERS=../core/main.h
 
-ALL=PageRank LabelPropagation CF COEM SSSP BFS
+ALL=PageRank LabelPropagation CF COEM SSSP BFS ConnectedComponents
 
 # make
 
